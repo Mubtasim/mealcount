@@ -1,0 +1,22 @@
+{% extends 'mealcounts/main.html' %}
+
+{% block content %}
+
+<h1 style="text-align: center;">Welcome to DashBoard</h1>
+<br>
+<div class="dash-container">
+    <div class="mealrate">
+        <h3>Meal Rate</h3>
+        <h1>{{mealRate}}</h1>
+    </div>
+    <div class="member-details">
+        <h4>Member Details</h4>
+        <ul>
+            {% for member in members %}
+                <li><a class="btn btn-info" href="{% url 'user' member.id %}">{{member.name}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

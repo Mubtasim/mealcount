@@ -1,0 +1,18 @@
+{% extends 'mealcounts/main.html' %}
+
+{% block content %}
+
+<div class="card middle">
+    <div class="card-body">
+        <h3 class="card-title">{{user.name}}</h3>
+        <p>Total Meal {{totalMeal}}</p>
+        <p>Meal Rate {{mealRate}}</p>
+        <p>Total Deposit {{deposit}}</p>
+        <p>Total Cost {{totalCost}}</p>
+        <p>Delta:  {{delta}}</p>
+        <hr>
+        <a class="btn btn-block btn-primary" href="{% url 'home' %}">Go to DashBoard</a>
+    </div>
+</div>
+
+{% endblock %}

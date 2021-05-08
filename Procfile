@@ -1,0 +1,1 @@
+web: gunicorn MealSheet.wsgi --log-file -

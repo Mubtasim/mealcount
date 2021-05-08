@@ -1,0 +1,21 @@
+{% extends 'mealcounts/main.html' %}
+
+{% block content %}
+
+<div class="middle">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <input class="form-control" type='number' name='din' placeholder="Date">
+        </div>
+        {% for member in members %}
+            <div class="form-group">
+                <label>{{member.name}}</label>
+                <input class="form-control" type='number' name='{{member.id}}' placeholder="Meals" value="0">
+            </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-block btn-primary">Add Meals</button>
+    </form>
+</div>
+
+{% endblock %}
